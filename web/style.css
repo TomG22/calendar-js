@@ -1,31 +1,36 @@
 body {
   background-color: #141f29;
-  display: inline-flex;
-  flex-direction: row;
   margin: 0px;
   padding: 0px;
+  overflow: hidden;
 }
 
-#monthsFrame {
+#calendarMenu {
+  margin-top: 50px;
+  height: 715px;
+  display: flex;
+}
+
+#monthsGrid {
+  order: 1;
   width: 1000px;
-  height: 700px;
-  margin: 10px;
-  padding: 10px;
-  border-style:solid;
+  height: 715px;
+  margin-left: 50px;
+  border-style: solid;
   border-color: cyan;
-  border-width: 5px;
+  border-width: 2px;
+  flex-direction: row;
+  overflow: hidden;
 }
 
-.month {
-  margin: 10px;
+.monthBox {
+  margin-top: 50px;
+  margin-bottom: 0px;
 }
 
-.week {
-  margin: 5px;
+.weekBox {
   display: flex;  
   flex-direction: row;
-  padding: 2px;
-  margin-bottom: 5px;
 }
 
 
@@ -33,24 +38,39 @@ body {
   width: 100%;
   aspect-ratio: 1;
   color: white;
-  text-align: right;
-  font-family: "Arial";
+  font-family: monospace;
+  font-size: 13pt;
+  padding: 5px;
   background-color: black;
-  margin: 0 5px;
-  text-combine-upright: none;
+  margin: 3px;
+}
+
+#scrollBar {
+  order: 2;
+  height: 715px;
+  width: 17px;
+  margin-left: 0px;
+  border-style: solid;
+  border-color: white;
+  border-width: 2px;
+  fill: dimgray;
+}
+
+#scrollButton {
+  height: 40px;
+  width: 17px;
+  position: relative;
+  background-color: white;
+  border-radius: 5px 5px 20px 20px;
 }
 
 #sideBar {
-  min-width: 300px;
-  padding: 10px;
-  margin: 10px;
-  margin-top: 20px;
-  margin-right: 20px;
-  height: 700;
+  order: 3;
+  width: 300px;
+  height: 715px;
   border-style:solid;
   border-color: white;
-  border-width: 5px;
-  scroll-behavior;
+  border-width: 2px;
 }
 
 #monthBanner {
